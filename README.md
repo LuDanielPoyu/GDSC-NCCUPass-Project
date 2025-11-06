@@ -55,12 +55,12 @@ flowchart LR
 **Pipeline (simplified)**
 ```mermaid
 flowchart LR
-  K[k6 runner] --> S[Chosen scenario<br/>(smoke, ramp, steady)]
-  S --> A[API under test]
-  A --> M[Response metrics]
-  M --> T[Threshold checks<br/>(p95, error rate)]
-  T -- pass --> G[Green build]
-  T -- fail --> R[Investigate & fix]
+  K["k6 runner"] --> S["Chosen scenario (smoke, ramp, steady)"]
+  S --> A["API under test"]
+  A --> M["Response metrics"]
+  M --> T["Threshold checks (p95, error rate)"]
+  T -- "pass" --> G["Green build"]
+  T -- "fail" --> R["Investigate & fix"]
 ```
 
 ---
